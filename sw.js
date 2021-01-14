@@ -3,6 +3,7 @@ const DINAMYC_CACHE_NAME = 'assets-site-v1'
 const ASSETS = [
     '/',
     '/index.html',
+    '/sumario.md',
     '/fallback.html',
     '/assets/images/banner.png', 
     '/assets/images/illustration.png',    
