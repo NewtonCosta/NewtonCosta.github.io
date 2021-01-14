@@ -1,7 +1,7 @@
 const CACHE_NAME = 'assets-shell-v1';
 const DINAMYC_CACHE_NAME = 'assets-site-v1'
 const ASSETS = [
-    '.',
+    '/',
     '/index.html',
     '/fallback.html',
     '/assets/images/banner.png', 
@@ -53,7 +53,7 @@ self.addEventListener('activate', evt => {
         caches.keys().then(keys => {
             Promise.all(keys
                 //filtering and delete old caches assets
-                .filter(key => key !== CACHE_NAME && key !== DINAMYC_CACHE_NAME )
+                .filter(key => key !== CACHE_NAME && key !== DINAMYC_CACHE_NAME && keys.url('/collect'))
                 .map(key => caches.delete(key))
             )        
         })
@@ -65,8 +65,10 @@ self.addEventListener('fetch', evt => {
     evt.respondWith(
         caches.match(evt.request)
             .then(cacheAsset => {
-                return cacheAsset ||  fetch(evt.request).then(fetchRes => {
-                    return caches.open(DINAMYC_CACHE_NAME).then(cache => {
+                return cacheAsset ||  fetch(evt.request)
+                .then(fetchRes => {
+                    return caches.open(DINAMYC_CACHE_NAME)
+                    .then(cache => {
                         cache.put(evt.request.url, fetchRes.clone());
                         limitCacheSize(DINAMYC_CACHE_NAME, 60);
                         return fetchRes;
@@ -79,5 +81,5 @@ self.addEventListener('fetch', evt => {
                 return caches.match('/fallback.html')  // serving fallback pag
              }               
             })
-    );
+        );
 });
