@@ -1,7 +1,7 @@
-const CACHE_NAME = 'assets-shell-v1';
-const DINAMYC_CACHE_NAME = 'assets-site-v1'
+const CACHE_NAME = 'shell-v1';
+const DINAMYC_CACHE_NAME = 'site-v1'
 const ASSETS = [
-    '.',
+    '/',
     '/index.html/',
     '/sumario/',
     '/fallback.html',
