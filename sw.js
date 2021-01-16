@@ -54,7 +54,7 @@ self.addEventListener('activate', evt => {
         caches.keys().then(keys => {
             Promise.all(keys
                 //filtering and delete old caches assets
-                .filter(key => key !== CACHE_NAME && key !== DINAMYC_CACHE_NAME && keys.url('/collect'))
+                .filter(key => key !== CACHE_NAME && key !== DINAMYC_CACHE_NAME)
                 .map(key => caches.delete(key))
             )        
         })
@@ -71,7 +71,7 @@ self.addEventListener('fetch', evt => {
                     return caches.open(DINAMYC_CACHE_NAME)
                     .then(cache => {
                         cache.put(evt.request.url, fetchRes.clone());
-                        limitCacheSize(DINAMYC_CACHE_NAME, 60);
+                        limitCacheSize(DINAMYC_CACHE_NAME, 80);
                         return fetchRes;
                     })
                 });
