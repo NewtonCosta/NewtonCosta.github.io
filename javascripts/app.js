@@ -32,7 +32,7 @@ function installApp() {
         if (choiceResult.outcome === "accepted") {
             //console.log("PWA setup accepted");          
         } else {
-            console.log("PWA setup rejected");
+            //console.log("PWA setup rejected");
         }
         installButton.disabled = false;
         deferredPrompt = null;
