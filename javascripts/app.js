@@ -11,7 +11,7 @@ const installButton = document.getElementById("install_button");
 const fbShareButton = document.getElementById("know-more");
 
 window.addEventListener("beforeinstallprompt", e => {
-  console.log("beforeinstallprompt fired");
+  //console.log("beforeinstallprompt fired");
   // Prevent Chrome 76 and earlier from automatically showing a prompt
    e.preventDefault();
   // Stash the event so it can be triggered later.
