@@ -1,27 +1,27 @@
 const CACHE_NAME = 'assets-shell-v1';
 const DINAMYC_CACHE_NAME = 'assets-site-v1'
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/sumario.md',
+    '.',
+    '/index.html/',
+    '/sumario/',
     '/fallback.html',
     '/assets/images/banner.png', 
     '/assets/images/illustration.png',    
     '/assets/images/icons/gf_logo_02.png',
+    '/assets/images/icons/gf_logo.png',
     '/assets/images/icons/android-chrome-192x192.png',
     '/assets/images/icons/favicon.ico',
     '/assets/images/icons/favicon-16x16.png',
     '/assets/images/icons/favicon-32x32.png',
-    '/assets/stylesheets/palette.8828ec21.min.css',
-    '/assets/stylesheets/main.55459416.min.css', 
+    //'/assets/stylesheets/palette.8828ec21.min.css',
+    //'/assets/stylesheets/main.55459416.min.css', 
     '/assets/stylesheets/overrides.2ffcfff4.min.css',   
-    'assets/javascripts/vendor.6438a40d.min.js',
+    //'assets/javascripts/vendor.6438a40d.min.js',
     'assets/javascripts/bundle.23e06a0d.min.js',   
     'assets/javascripts/lunr/min/lunr.pt.min.js',
     'assets/javascripts/worker/search.4ac00218.min.js',
-    //'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback',
-    'sitemap.xml',
-    'search/search_index.json'
+    '/sitemap.xml',
+    '/search/search_index.json'
 ];
 
 
@@ -71,7 +71,7 @@ self.addEventListener('fetch', evt => {
                     return caches.open(DINAMYC_CACHE_NAME)
                     .then(cache => {
                         cache.put(evt.request.url, fetchRes.clone());
-                        limitCacheSize(DINAMYC_CACHE_NAME, 80);
+                        limitCacheSize(DINAMYC_CACHE_NAME, 60);
                         return fetchRes;
                     })
                 });
