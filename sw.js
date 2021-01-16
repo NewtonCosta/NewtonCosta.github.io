@@ -2,7 +2,7 @@ const CACHE_NAME = 'shell-v1';
 const DINAMYC_CACHE_NAME = 'site-v1'
 const ASSETS = [
     '/',
-    '/index.html/',
+    '/index.html',
     '/sumario/',
     '/fallback.html',
     '/assets/images/banner.png', 
