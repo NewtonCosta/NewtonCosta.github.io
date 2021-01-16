@@ -1,7 +1,7 @@
 const CACHE_NAME = 'shell-v1';
 const DINAMYC_CACHE_NAME = 'site-v1'
 const ASSETS = [
-    '/',
+    '.',
     '/index.html',
     '/sumario/',
     '/fallback.html',
@@ -76,11 +76,17 @@ self.addEventListener('fetch', evt => {
                     })
                 });
             }).catch(() => {
+                return caches.open(CACHE_NAME).then(cache => {
+                    return cache.match('/fallback.html') ;
+                });
+            
+            
+            /*.catch(() => {
              let request = evt.request.url;           
              let re = /[a-z]/g;
              if(request.search(re) > -1){
                 return caches.match('/fallback.html')  // serving fallback pag
-             }               
+             }               */
             })
         );
 });
