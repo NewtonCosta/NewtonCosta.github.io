@@ -31,7 +31,7 @@ Technically, I have resorted to [Progressive Web Application](https://web.dev/pr
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
 ### CI/CD
- For make available to users quickly and in an efficiente way, I fully automated the delivery by using Continues integration and Continous Delivery aproach with [Jenkins](https://www.jenkins.io/) to _automagically, delivery updates from my development machine to user device_ :robot:.  See the full pipeline below
+ For make available to users quickly and in an efficiente way, I fully automated the delivery by using Continues integration and Continous Delivery aproach with [Jenkins]  (https://www.jenkins.io/) to _automagically, delivery updates from my development machine to user device_ :robot:.  See the full pipeline below
 
 ### Hosting
 Currently this applications is hosted on [Github Pages](https://pages.github.com/)
