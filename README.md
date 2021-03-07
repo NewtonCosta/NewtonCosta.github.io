@@ -17,7 +17,7 @@ On this, I congregated every artefacts used by Angolan's officials academy for t
 Technically, I have resorted to [Progressive Web Application](https://web.dev/progressive-web-apps/) approach, to make this available in any device, any browser, and offline usage.
 
 
-### Main Features
+#### Main Features
 - User friendly interface, adaptative, responsive and easy to use
 - Easy navigation through manual pages, possibility to go back and forth
 - Use on the browser or instant install
@@ -25,13 +25,27 @@ Technically, I have resorted to [Progressive Web Application](https://web.dev/pr
 - Download documents
 - Share quotes on facebook
 
-### Technology behind
+#### Technology behind
 - Javascript, HTML, SCSS,
 - [MkDocs](https://www.mkdocs.org/)
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
-### CI/CD
- For make available to users quickly and in an efficiente way, I fully automated the delivery by using Continues integration and Continous Delivery aproach with [Jenkins]  (https://www.jenkins.io/) to _automagically, delivery updates from my development machine to user device_ :robot:.  See the full pipeline below
-
-### Hosting
+#### Hosting
 Currently this applications is hosted on [Github Pages](https://pages.github.com/)
+
+#### CI/CD
+ For make available to users quickly and in an efficiente way, I fully automated the delivery by using Continues integration and Continous Delivery aproach with [Jenkins](https://www.jenkins.io/) to _automagically, delivery updates from my development machine to user device_ :robot:.  See the full pipeline below
+
+** Click to see a full image ** 
+![fipif_pipeline](https://user-images.githubusercontent.com/3983043/110237042-f712cd00-7f39-11eb-95cf-26c617477236.png)
+
+
+
+
+<p algin="center">Visit and enjoy: https://guiadeformadores.ao :wink:</p>
+
+
+
+
+
+
